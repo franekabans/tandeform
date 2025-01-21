@@ -1,0 +1,7 @@
+.env
+node_modules/
+public/build/
+public/storage
+storage/framework/
+vendor/
+
