@@ -1,0 +1,168 @@
+/* General styling for the body */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4; /* Light grey background */
+}
+
+/* Navigation (Links) styling */
+nav {
+    position: fixed;             /* Fixes the nav to the top */
+    top: 0;                      /* Positions it at the very top */
+    left: 0;                     /* Ensures it's aligned with the left edge */
+    width: 100%;                 /* Ensures nav takes full width */
+    background-color: #ffffff;  /* White background */
+    padding: 10px 0;             /* Adds padding for the links */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    z-index: 1000;               /* Ensures it stays on top of other content */
+    display: flex;
+    justify-content: center;     /* Centers the links horizontally */
+    align-items: center;         /* Centers the links vertically */
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;  /* Dark grey text color */
+    font-size: 16px;
+    font-weight: normal;
+    margin: 0 15px; /* Adds space between the links */
+    transition: color 0.3s ease-in-out; /* Smooth color transition */
+    padding: 8px 12px;
+}
+
+nav a:hover {
+    color: #0056b3; /* Blue color on hover */
+    border-bottom: 2px solid #0056b3; /* Simple underline effect */
+}
+
+/* Adjust the content below the nav to avoid overlap */
+main {
+    margin-top: 60px; /* Ensures there's space for the fixed navbar */
+    padding: 20px;
+    background-color: #ffffff; /* White background for the main content */
+    border-radius: 8px; /* Rounded corners for the main content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Hover effects for navigation links */
+nav:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Slightly increased shadow on hover */
+}
+
+
+/* Centering all content vertically and horizontally */
+#app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* Make sure it's full height of the viewport */
+    flex-direction: column;
+    text-align: center;  /* Centers text horizontally */
+    padding: 20px;  /* Adds some padding around */
+}
+
+/* Styling for the h1 title */
+h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px; /* Adds space between title and form */
+    color: #333;
+}
+
+/* Form styling */
+form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;  /* Makes the form smaller */
+    width: 100%;
+    margin-top: 20px;  /* Spacing between the form and the title */
+}
+
+/* Input and button styling */
+input[type="text"], input[type="file"], button {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%; /* Ensures input takes full width of the form container */
+    font-size: 16px;
+    max-width: 300px;  /* Sets a max-width to reduce the size of inputs */
+    margin-left: auto; /* Centers the input field */
+    margin-right: auto; /* Centers the input field */
+}
+
+/* Button specific styles */
+button {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    max-width: 300px;  /* Ensures the button is the same width as inputs */
+    margin-left: auto; /* Centers the button */
+    margin-right: auto; /* Centers the button */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Label styling */
+label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Error message styling */
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.success {
+    color: green;
+    font-size: 18px;
+    margin: 5px;
+}
+
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns per row */
+    gap: 15px;  /* Spacing between the images */
+    padding: 20px;
+}
+
+
+
+/* Styling for the image */
+.image {
+    width: 100%;  /* Ensures the image fills the container */
+    height: auto;  /* Keeps the aspect ratio intact */
+    max-width: 250px; /* Limit the max width of each image */
+    margin: 0 auto;  /* Centers the image inside the container */
+    display: block;
+    border-bottom: 2px solid #f0f0f0; /* Adds a light border at the bottom */
+}
+
+/* Styling for the text under each image */
+.image-item p {
+    padding: 10px;
+    font-size: 14px;
+    color: #333;
+    background-color: #f9f9f9;
+    margin: 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
