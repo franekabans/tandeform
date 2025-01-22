@@ -12,6 +12,7 @@ A simple recruitment examplary excercise
 2. `cd` into the folder where the project is located
 3. Run: `cp .env.example .env`
 4. Run: `docker-compose up --build -d`
+5. Run: `docker run --rm -v $(pwd):/app composer install`
 5. Run: `docker-compose exec tandeform /usr/local/bin/php /var/www/html/artisan migrate --seed`
 6. Run: `npm install && npm run dev` 
 7. App should be available at `localhost:8080`
