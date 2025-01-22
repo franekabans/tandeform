@@ -1,0 +1,110 @@
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+// General body styling
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4; /* Light grey background */
+}
+
+// Navigation bar
+nav {
+    @extend .navbar, .navbar-light, .bg-light;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow */
+    display: flex;
+    justify-content: center;
+}
+
+nav a {
+    @extend .nav-link;
+    color: #333;
+    transition: color 0.3s ease-in-out;
+    margin: 10px;
+}
+
+nav a:hover {
+    color: #0056b3;
+    border-bottom: 2px solid #0056b3;
+}
+
+// Main content
+main {
+    @extend .container, .shadow-sm;
+    margin-top: 60px;
+    padding: 20px;
+    border-radius: 8px; /* Optional rounded corners */
+    background-color: #ffffff;
+}
+
+// Centered app container
+#app {
+    @extend .d-flex, .justify-content-center, .align-items-center;
+    height: 100vh;
+    flex-direction: column;
+    text-align: center;
+}
+
+// Form styling
+form {
+    @extend .card, .shadow-sm;
+    padding: 20px;
+    max-width: 400px;
+    margin: 20px auto; /* Centers the form */
+    gap: 15px; /* Optional spacing if using CSS gap */
+}
+
+// Inputs and buttons
+input[type="text"], input[type="file"], button {
+    @extend .form-control;
+    max-width: 300px;
+    margin: 10px auto; /* Centers inputs and buttons */
+}
+
+button {
+    @extend .btn, .btn-success;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+// Error and success messages
+.error {
+    @extend .text-danger, .small;
+}
+
+.success {
+    @extend .text-success, .fs-5;
+}
+
+// Image grid
+.image-grid {
+    @extend .row;
+    gap: 15px; /* Optional spacing if not using Bootstrap’s gutter utilities */
+    padding: 20px;
+}
+
+.image-item {
+    @extend .col-6, .text-center;
+}
+
+.image {
+    @extend .img-fluid;
+    max-width: 250px;
+    margin: 0 auto;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.image-item p {
+    @extend .small, .bg-light;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0;
+    padding: 10px;
+}

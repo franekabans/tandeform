@@ -22,25 +22,31 @@ function Results() {
     }, []);
 
     if (loading) {
-        return <div>Loading images...</div>;
+        return <div className="text-center">Loading images...</div>;
     }
 
     if (error) {
-        return <div className="error-message">{error}</div>;
+        return <div className="alert alert-danger">{error}</div>;
     }
 
     return (
         <div id="Results">
-            <h1>Uploaded Images</h1>
-            <div className="image-grid">
+            <h1 className="text-center mb-4">Uploaded Images</h1>
+            <div className="row">
                 {images.map((image) => (
-                    <div key={image.id} className="image-item">
-                        <img
-                            src={`/storage/${image.image}`} // Assuming image path is correct
-                            alt={`${image.first_name} ${image.last_name}`}
-                            className="image"
-                        />
-                        <p>{image.first_name} {image.last_name}</p>
+                    <div key={image.id} className="col-md-6 mb-4">
+                        <div className="card">
+                            <img
+                                src={`/storage/${image.image}`}
+                                alt={`${image.first_name} ${image.last_name}`}
+                                className="card-img-top"
+                            />
+                            <div className="card-body">
+                                <p className="card-text">
+                                    {image.first_name} {image.last_name}
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 ))}
             </div>
