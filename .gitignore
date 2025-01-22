@@ -5,3 +5,4 @@ public/storage
 storage/framework/
 vendor/
 
+!.env.example

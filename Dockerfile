@@ -20,10 +20,9 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 
-# Copy existing application directory contents
 COPY . /var/www/html/
+COPY --from=composer /app/vendor /var/www/html/vendor
 
-# Set ownership and permissions for the /var/www/html directory to www-data
 RUN chown -R www-data:www-data /var/www/html/
 
 USER www-data
