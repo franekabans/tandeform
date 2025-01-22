@@ -9,11 +9,9 @@ Route::get('api/results', [ImageController::class, 'index']);
 Route::view('/', 'index');
 
 
-// Protected routes
 Route::group(['middleware' => 'auth'], function () {
     Route::view('/results', 'index');
 });
 
-// Authentication routes
 Auth::routes();
 
